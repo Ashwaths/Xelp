@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f8f9fa!important;}">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#"><h1>{{title}}</h1></a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/products">Products</a>
+      </li>
+      <!-- <li class="nav-item">
+        
+      </li> -->
+      <li class="nav-item">
+          <input class="form-control mr-sm-3" type="search" placeholder="Search" aria-label="Search" style="margin-right: 10.5rem!important;" #searchBox id="search-box" (input)="search(searchBox.value)">
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+      </li>
+    </ul>
+     <form class="form-inline my-2 my-lg-0">
+        <a class="nav-link" routerLink="/login" tabindex="-1" aria-disabled="true" *ngIf='!showNav'>LOGIN</a>
+        <a class="nav-link" routerLink="/register" tabindex="-1" aria-disabled="true" *ngIf='!showNav'>SIGNUP</a>
+    </form> 
+  </div>
+</nav>
+<br> 
+
+<router-outlet></router-outlet>
+<app-messages></app-messages>
+ 
